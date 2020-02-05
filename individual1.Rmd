@@ -1,0 +1,32 @@
+---
+title: "ds202_lab2"
+author: "Anyesha Ray"
+date: "February 5, 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+rating=choco$Rating
+hist_rating= hist(rating)
+hist_rating
+```
+
+The distribution, according to the histogram, is centered a little above 3. Most of the ratings are between 2.5 and 3.5. It looks fairly normal with a slight skew. I would say there are no outlier because if the mean is around 3 the values do not go high enough to be considered an outlier by the outlier test. However there only seems to be a few ratings above 4 so those could be considered outliers from just a visual perspective. 
+
+
+```{r }
+plot(choco$Cocoa.Pct, rating)
+
+cor(choco$Cocoa.Pct, rating)
+```
+
+I would say thetho variables do not depend on each other. There seems to be no correlation and they are all scattered about with no pattern visible in the scatter plot. The correlation is also very close to 0. 
