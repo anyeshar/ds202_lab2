@@ -1,0 +1,32 @@
+---
+title: "Team"
+author: "McKenna Goffinet"
+date: "2/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+library(plyr)
+```
+
+1)
+```{r}
+dim(choco)
+head(choco)
+```
+1852 chocolate bars
+
+2)
+```{r}
+barplot(table(choco$Review.Date))
+```
+The number of ratings per year has been generally increasing over the years, though inconsistently. The number of ratings in a single year peaked in 2015, followed by a sudden drop in 2017. The period of most increase occurred during the years of 2010 to 2015.
+
+3)
+```{r}
+a <- count(choco$Company)
+b <- a[order(-a$freq),]
+b[1:3,]
+```
