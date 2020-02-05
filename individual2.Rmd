@@ -1,0 +1,26 @@
+---
+title: "individual2"
+author: "McKenna Goffinet; Git UN: mgoffinet"
+date: "2/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+```
+
+
+1)
+```{r}
+hist(choco$Rating)
+```
+
+The distribution of the chocolate ratings is skewed slightly to the left with a majority of the chocolate ratings falling in the 2.5 to 3.5 range. No ratings are visible in the 4 to 4.5 range, and very few, possibly outliers, fall in the 4.5 to 5 range.
+
+2)
+```{r}
+plot(choco$Cocoa.Pct, choco$Rating)
+```
+
+Since there is no clear trend in the scatter plot shown above, the rating doesn't appear to rely on the percentage of cocoa in a piece of chocolate. As the percentage of cocoa increases, the distribution of ratings remains fairly constant, indicating no clear relationship.
