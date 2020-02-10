@@ -24,6 +24,7 @@ head(choco)
 ```{r}
 barplot(table(choco$Review.Date))
 ```
+
 The number of ratings per year has been generally increasing over the years, though inconsistently. The number of ratings in a single year peaked in 2015, followed by a sudden drop in 2017. The period of most increase occurred during the years of 2010 to 2015.
 
 3)
@@ -38,7 +39,9 @@ boxplot(choco$Rating~choco$Company.Location, main="Country Location vs. Rating",
 ```
 
 
-Location does not seem to have much of an impact on rating. They seem pretty consistedn in the 2 to 4 rating range with a few outliers. 
+The three locations with the most ratings are Soma, Bonnat, and Fresco with 47, 27, and 26 ratings, respectively.
+
+Location does not seem to have much of an impact on rating. They seem pretty consistent in the 2 to 4 rating range with a few outliers. 
 
 4)
 Our Question:
