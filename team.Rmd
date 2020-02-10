@@ -1,8 +1,10 @@
 ---
 title: "Team"
-author: "McKenna Goffinet"
+author: "McKenna Goffinet & Anyesha Ray"
 date: "2/5/2020"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +28,35 @@ The number of ratings per year has been generally increasing over the years, tho
 
 3)
 ```{r}
-a <- count(choco$Company)
-b <- a[order(-a$freq),]
-b[1:3,]
+y <- count(choco$Company)
+z <- y[order(-y$freq),]
+z[1:3,]
+
+
+boxplot(choco$Rating~choco$Company.Location, main="Country Location vs. Rating", xlab="Country Location", ylab="Rating")
+
 ```
+
+
+Location does not seem to have much of an impact on rating. They seem pretty consistedn in the 2 to 4 rating range with a few outliers. 
+
+4)
+Our Question:
+What are the most popular countries for producing beans? What are the least 3?
+
+5)
+Most popular:
+```{r}
+c <- count(choco$Broad.Bean.Origin)
+d <- c[order(-c$freq),]
+d[1:3,]
+```
+Least popular:
+```{r}
+e <- count(choco$Broad.Bean.Origin)
+f <- e[order(e$freq),]
+f[1:10,]
+```
+
+6)
+Since we did this in lab, the workflow was smooth. We both worked on question 1 to 3 on Mckenna's laptop and then pushed it. We worked on the last 3 questions on my laptop. It was pretty balanced work load but it is slightly difficult to push and pull items from Github at least at this stage. Other wise work flow was smooth. We both did the individual part and then collaborated on the team questions on both laptops.  

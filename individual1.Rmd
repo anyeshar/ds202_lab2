@@ -29,4 +29,10 @@ plot(choco$Cocoa.Pct, rating)
 cor(choco$Cocoa.Pct, rating)
 ```
 
-I would say thetho variables do not depend on each other. There seems to be no correlation and they are all scattered about with no pattern visible in the scatter plot. The correlation is also very close to 0. 
+
+
+```{r }
+
+```
+
+I would say the to variables do not depend on each other. There seems to be no correlation and they are all scattered about with no pattern visible in the scatter plot. The correlation is also very close to 0. 
